@@ -19,7 +19,6 @@ int main()
     char choice;
     char y = 'y';
     char n = 'n';
-    string password;
     ofstream file;
     file.open("psw.txt");
     cout << "Enter number of digits you want your password to be.\n";
