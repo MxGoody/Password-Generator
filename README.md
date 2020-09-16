@@ -12,3 +12,6 @@ Reason: Cleaner code, colorized aswell.
 I also do not recommend going above reasonable digits and times you generate a password.
 If you wish to do so, then i would recommend changing the unsigned char into a string.
 You would also haft to change the format of the array.
+
+Directions: Open your terminal. Go to your directory where you have my generator in.
+Then do "./Linux64" If this doesnt work then double check if you have renamed it to something else.
