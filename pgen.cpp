@@ -3,15 +3,6 @@
 #include <string>
 #include <ctime>
 using namespace std;
-//note that im not good at c++ and im sorry extremist's.
-/*Challenge: Use this c++ example and figure out how to do the same thing.
-#include <iostream>
-int main()
-{
-    for (unsigned char i = 32; i<=127; ++i)
-       std::cout << i;
-    return 0;
-}*/
 int main()
 {
     char a[] = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*1234567890+-*/";
