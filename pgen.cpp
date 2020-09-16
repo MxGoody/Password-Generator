@@ -20,9 +20,9 @@ int main()
         cout << "Enter an extension: ";
         cin >> g;
         file.open(g);
-        cout << "Enter number of digits you want your passwords to be.\n";
+        cout << "\nEnter number of digits you want your passwords to be.\n";
         cin >> count;
-        cout << "How many times do you want to generate these passwords?\n";
+        cout << "\nHow many times do you want to generate these passwords?\n";
         cin >> times;
         srand(time(NULL));
         for (int i = 0; i < times; i++)
