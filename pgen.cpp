@@ -3,85 +3,39 @@
 #include <string>
 #include <ctime>
 using namespace std;
+//note that im not good at c++ and im sorry extremist's.
+//made by MxGoody.
+//MIT License.
+//Version 1.1
 int main()
 {
     char a[] = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*1234567890+-*/";
     short count, times, rnum;
     char choice;
-    char y = 'y';
-    char n = 'n';
+    char y = 'y', n = 'n';
+    string g;
     ofstream file;
-    file.open("psw.txt");
-    cout << "Enter number of digits you want your password to be.\n";
-    cin >> count;
-    cout << "How many times do you want to generate this password?\n";
-    cin >> times;
-    srand(time(NULL));
-    for (int i = 0; i < times; i++)
+    while (choice != n || choice == y)
     {
-            for (int i = 0; i <= count; i++)
-    {
-        rnum = rand() % 75 + 1;
-        file << a[rnum];
-    }
-    file << "\n";
-    }
-    cout << "\nDone.\n";
-    cout << "Do you want to generate more passwords?";
-    cin >> choice;
-    if (choice == y)
-    {
-        cout << "Enter number of digits you want your password to be.\n";
-    cin >> count;
-    cout << "How many times do you want to generate this password?\n";
-    cin >> times;
-    srand(time(NULL));
-    for (int i = 0; i < times; i++)
-    {
-            for (int i = 0; i <= count; i++)
-    {
-        rnum = rand() % 75 + 1;
-        file << a[rnum];
-    }
-    file << "\n";
-    }
-    } else if (choice == n)
-    {
-        return 0;
-    } else
-    {
-        cout << "Invalid\n\a\v" << endl;
-        while (choice != y || choice != n)
+        cout << "Enter an extension: ";
+        cin >> g;
+        file.open(g);
+        cout << "Enter number of digits you want your passwords to be.\n";
+        cin >> count;
+        cout << "How many times do you want to generate these passwords?\n";
+        cin >> times;
+        srand(time(NULL));
+        for (int i = 0; i < times; i++)
         {
-            cin >> choice;
-            if (choice == y)
-            {
-                cout << "Enter number of digits you want your password to be.\n";
-                cin >> count;
-                cout << "How many times do you want to generate this password?\n";
-                cin >> times;
-                srand(time(NULL));
-                for (int i = 0; i < times; i++)
-                {
-                for (int i = 0; i <= count; i++)
-                { 
-                rnum = rand() % 75 + 1;
-                file << a[rnum];
-                }
-                file << "\n";
-                }
-                cout << "\nDone.\n";
-            } else if (choice == n)
-            {
-                cout << "Okay, Relaunch when you need to.";
-            } else
-            {
-                cout << "Still invalid.\n\a\v";
-                return 0;
-            }
-             
+            for (int i = 0; i <= count; i++)
+        {
+        rnum = rand() % 75 + 1;
+        file << a[rnum];
         }
-        
+        file << "\n";
+        }
+        cout << "\nDone.\n";
+        cout << "Do you want to generate more passwords? y/n\nChoice: ";
+        cin >> choice;
     }
-      
 }
